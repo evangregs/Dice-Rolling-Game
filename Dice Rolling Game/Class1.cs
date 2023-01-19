@@ -20,8 +20,8 @@ namespace Dice_Rolling_Game
 
             for(int i=0; i<numRolls; i++)
             {
-                int dice1 = rnd.Next(1, 6);
-                int dice2 = rnd.Next(1, 6);
+                int dice1 = rnd.Next(1, 7);
+                int dice2 = rnd.Next(1, 7);
                 int dieTotal = dice1 + dice2;
                 if (dieTotal == 2)
                 {
