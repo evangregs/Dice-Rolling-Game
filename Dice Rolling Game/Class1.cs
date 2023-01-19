@@ -15,7 +15,7 @@ namespace Dice_Rolling_Game
         public void RollTwoDice(int numRolls)
         {
             Random rnd = new Random();
-            int[] rollArray = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            float[] rollArray = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
             int[] rollArray2 = { 7, 7, 7 };
 
             for(int i=0; i<numRolls; i++)
@@ -68,8 +68,18 @@ namespace Dice_Rolling_Game
                     rollArray[10] += 1;
                 }
             }
-            for(int i=0; i<rollArray.Length; i++)
-            Console.WriteLine(rollArray[i]);
+            for (int i = 0; i < rollArray.Length; i++)
+            {
+                rollArray[i] = (rollArray[i] / numRolls) * 100;
+            }
+            for (int i=2; i<rollArray.Length+2; i++)
+            {
+                Console.WriteLine(i);
+                for (int j = 0; j < rollArray[i - 2]; j++)
+                {
+                    Console.WriteLine("*");
+                }
+            }
         }
 
     }
