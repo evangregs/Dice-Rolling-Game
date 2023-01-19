@@ -74,11 +74,12 @@ namespace Dice_Rolling_Game
             }
             for (int i=2; i<rollArray.Length+2; i++)
             {
-                Console.WriteLine(i);
+                Console.Write(i + ": ");
                 for (int j = 0; j < rollArray[i - 2]; j++)
                 {
-                    Console.WriteLine("*");
+                    Console.Write("*");
                 }
+                Console.Write("\n");
             }
         }
 
