@@ -16,7 +16,6 @@ namespace Dice_Rolling_Game
         {
             Random rnd = new Random();
             float[] rollArray = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-            int[] rollArray2 = { 7, 7, 7 };
 
             for(int i=0; i<numRolls; i++)
             {
