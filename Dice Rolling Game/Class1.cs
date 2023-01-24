@@ -6,12 +6,13 @@ namespace Dice_Rolling_Game
 {
     public class DiceRoll
     {
-        //private int numRolls = 0;
+       // create the "DiceRoll" method which will simulate the rolling of the two dice and print the resulting histogram
         public DiceRoll()
         {
-            //numRolls = temp;
+        
         }
 
+        // the RollTwoDice method simulates the rolling of the dice and tracks the totals for each number in an array called "rollArray"
         public void RollTwoDice(int numRolls)
         {
             Random rnd = new Random();
@@ -67,10 +68,12 @@ namespace Dice_Rolling_Game
                     rollArray[10] += 1;
                 }
             }
+            // this for loop converts the roll totals into percentages
             for (int i = 0; i < rollArray.Length; i++)
             {
                 rollArray[i] = (rollArray[i] / numRolls) * 100;
             }
+            // this nested for loop iterates through the array of percentages and prints the appropriate number of *s
             for (int i=2; i<rollArray.Length+2; i++)
             {
                 Console.Write(i + ": ");
